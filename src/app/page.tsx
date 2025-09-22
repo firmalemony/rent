@@ -332,7 +332,7 @@ export default function Home() {
 										<button
 											onClick={async () => {
 												if (!selectedId) return;
-												await fetch(`/api/properties/${selectedId}`, { method: "DELETE" });
+												await fetch(`/api/properties/delete?id=${selectedId}`, { method: "DELETE" });
 												await fetchProperties();
 												setSelectedId((prev) => (prev === selectedId ? null : prev));
 											}}
