@@ -18,7 +18,7 @@ export async function DELETE(request: NextRequest) {
     }
     
     await prisma.property.delete({ where: { id } });
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ success: true });
   } catch (error: any) {
     return NextResponse.json({ error: String(error?.message || error) }, { status: 500 });
   }
