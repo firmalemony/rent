@@ -79,7 +79,7 @@ export default function Home() {
 
 	const canContinueFromStep1 = useMemo(() => address.trim().length > 5, [address]);
 	const canSubmitStep2 = useMemo(() => {
-		return (
+  return (
 			address.trim().length > 5 &&
 			params.layout.trim().length > 0 &&
 			typeof params.areaSqm === "number" &&
@@ -142,7 +142,7 @@ export default function Home() {
 							Pokračovat
 						</button>
 					</div>
-				</div>
+        </div>
 			)}
 
 			{step === 2 && (
@@ -347,6 +347,6 @@ export default function Home() {
 					</section>
 				</div>
 			)}
-		</div>
-	);
+    </div>
+  );
 }
